@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Clock</title>
+	<link rel="stylesheet" type="text/css" href="./main.css">
+	<link href="https://fonts.googleapis.com/css?family=Heebo:700|Montserrat:700|Work+Sans:700|Yantramanav:700" rel="stylesheet">
 	<script type="text/javascript" src="./grimoire-preset-basic.js"></script>
 </head>
 <body>
-	<script type="text/goml" src="./index.goml"></script>
+	<div class="grimoire_container">
+		<script type="text/goml" src="./index.goml"></script>
+	</div>
+	<div class="timezone">
+		<p id="timezone">JPN</p>
+	</div>
+	<div class="clock">
+		<p id="clock">00:00:00:00</p>
+	</div>
 	<script type="text/javascript" src="./main.js"></script>
+	<script type="text/javascript" src="./clock.js"></script>
 </body>
 </html>

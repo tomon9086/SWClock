@@ -1,3 +1,4 @@
+const Vector3 = gr.lib.math.Vector3;
 gr.registerComponent("Earth", {
 	attribute: {
 		rev: {
@@ -8,16 +9,11 @@ gr.registerComponent("Earth", {
 	$mount: function() {
 		this.__bindAttributes();
 		this.r = 0;
-		this.add = 1;
-		if(this.rev) {
-			this.r += 180;
-			this.add = -1;
-		}
 		console.log(this.rev);
 	},
 	$update: function() {
-		this.node.setAttribute("rotation", "y(" + this.r + ")");
-		this.r += this.add / 10;
+		this.node.setAttribute("rotation", "0, " + this.r + ", " + 30);
+		this.r += 1 / 10;
 	}
 });
 gr.registerNode("earth", ["Earth"], {
